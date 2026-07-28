@@ -22,9 +22,7 @@ export function useVariablesList() {
       })
       .catch(err => {
         if (!ignore) {
-          setError(
-            getErrorMessage(err, 'Could not load the list of variables'),
-          );
+          setError(getErrorMessage(err, 'Could not load the list of variables'));
         }
       })
       .finally(() => {

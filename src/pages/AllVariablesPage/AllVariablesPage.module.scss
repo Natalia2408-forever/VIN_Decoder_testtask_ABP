@@ -13,6 +13,8 @@
 
 .tableWrap {
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 480px;
   border: 1px solid $borderColor;
   border-radius: 8px;
   background-color: $brown;

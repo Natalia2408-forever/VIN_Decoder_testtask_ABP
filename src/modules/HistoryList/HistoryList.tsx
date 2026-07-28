@@ -8,11 +8,7 @@ interface HistoryListProps {
   onSelect: (entry: VinHistoryEntry) => void;
 }
 
-export const HistoryList: React.FC<HistoryListProps> = ({
-  history,
-  activeVin,
-  onSelect,
-}) => {
+export const HistoryList: React.FC<HistoryListProps> = ({ history, activeVin, onSelect }) => {
   if (history.length === 0) {
     return null;
   }
@@ -26,9 +22,7 @@ export const HistoryList: React.FC<HistoryListProps> = ({
             <button
               type="button"
               className={
-                entry.vin === activeVin
-                  ? `${styles.item} ${styles.itemActive}`
-                  : styles.item
+                entry.vin === activeVin ? `${styles.item} ${styles.itemActive}` : styles.item
               }
               aria-pressed={entry.vin === activeVin}
               onClick={() => onSelect(entry)}

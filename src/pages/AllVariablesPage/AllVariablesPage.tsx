@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Loader } from '../../modules/Loader/Loader';
 import { ErrorMessage } from '../../modules/ErrorMessage/ErrorMessage';
-import { getVariableId } from '../../utils/gerVariableId';
+import { getVariableId } from '../../utils/getVariableId';
 import { useVariablesList } from '../../hooks/useVariablesList';
 import styles from './AllVariablesPage.module.scss';
 
@@ -19,9 +19,7 @@ export const AllVariablesPage: React.FC = () => {
       {!loading && !error && (
         <div className={styles.tableWrap}>
           <table className={styles.table}>
-            <caption className="visually-hidden">
-              List of all decodable VIN variables
-            </caption>
+            <caption className="visually-hidden">List of all decodable VIN variables</caption>
             <thead>
               <tr>
                 <th className={styles.colId} scope="col">

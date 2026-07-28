@@ -1,10 +1,4 @@
-import React, {
-  ChangeEvent,
-  FormEvent,
-  useRef,
-  useCallback,
-  useState,
-} from 'react';
+import React, { ChangeEvent, FormEvent, useRef, useCallback, useState } from 'react';
 import { validateVin } from '../../utils/validateVin';
 import { useEscapeKey } from '../../hooks/useEscapeKey';
 import styles from './VinForm.module.scss';
@@ -78,11 +72,7 @@ export const VinForm: React.FC<VinFormProps> = ({
             id="vin-input"
             ref={inputRef}
             autoFocus
-            className={
-              displayedError
-                ? `${styles.input} ${styles.inputInvalid}`
-                : styles.input
-            }
+            className={displayedError ? `${styles.input} ${styles.inputInvalid}` : styles.input}
             type="text"
             value={vin}
             onChange={handleChange}
@@ -90,9 +80,7 @@ export const VinForm: React.FC<VinFormProps> = ({
             maxLength={17}
             disabled={disabled}
             aria-invalid={Boolean(displayedError)}
-            aria-describedby={
-              displayedError ? 'vin-count vin-error' : 'vin-count'
-            }
+            aria-describedby={displayedError ? 'vin-count vin-error' : 'vin-count'}
           />
           <span id="vin-count" className={styles.counter}>
             {vin.length}/17

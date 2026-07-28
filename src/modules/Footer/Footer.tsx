@@ -24,12 +24,7 @@ export const Footer: React.FC = () => (
       <ul className={styles.list}>
         {links.map(({ name, url }) => (
           <li key={name}>
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
+            <a href={url} target="_blank" rel="noopener noreferrer" className={styles.link}>
               {name}
             </a>
           </li>

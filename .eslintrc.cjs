@@ -43,6 +43,7 @@ module.exports = {
     'prefer-const': 2,
     curly: [2, 'all'],
     'max-len': ['error', {
+      code: 100,
       ignoreTemplateLiterals: true,
       ignoreComments: true,
     }],

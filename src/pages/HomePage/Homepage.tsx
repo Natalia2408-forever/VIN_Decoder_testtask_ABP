@@ -90,16 +90,10 @@ export const HomePage: React.FC = () => {
         </div>
 
         <div className={styles.historyBlock}>
-          <HistoryList
-            history={history}
-            activeVin={currentVin}
-            onSelect={handleHistorySelect}
-          />
+          <HistoryList history={history} activeVin={currentVin} onSelect={handleHistorySelect} />
         </div>
 
-        <p className={styles.stats}>
-          Our database holds more than a million VIN codes
-        </p>
+        <p className={styles.stats}>Our database holds more than a million VIN codes</p>
       </div>
 
       {loading && <Loader />}
