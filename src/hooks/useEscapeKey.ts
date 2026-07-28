@@ -6,6 +6,7 @@ export function useEscapeKey(handler: () => void) {
   useEffect(() => {
     handlerRef.current = handler;
   }, [handler]);
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
