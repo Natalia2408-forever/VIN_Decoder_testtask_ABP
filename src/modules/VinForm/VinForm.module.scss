@@ -1,0 +1,97 @@
+@import '../../mainStyles/variables';
+@import '../../mainStyles/mixins';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: $brown;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include on-tablet {
+    flex-direction: row;
+  }
+
+  @include on-desktop {
+    gap: 12px;
+  }
+}
+
+.inputWrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 52px 10px 12px;
+  border: 1px solid $borderColor;
+  border-radius: 6px;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: white;
+  color: $textColor;
+
+  &:focus {
+    outline: none;
+    border-color: $accentColor;
+  }
+
+  &::placeholder {
+    text-transform: none;
+    letter-spacing: normal;
+    color: #a1a1aa;
+  }
+}
+
+.inputInvalid {
+  border-color: $errorColor;
+}
+
+.counter {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  font-size: 14px;
+  color: $textSecondaryColor;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: $accentColor;
+  color: $backgroundColor;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+
+  &:hover:not(:disabled) {
+    background-color: $accentColorHover;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  font-size: 15px;
+  color: $errorColor;
+}

@@ -1,0 +1,57 @@
+@import '../../mainStyles/variables';
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  align-self: flex-start;
+  font-size: 15px;
+  color: $brown;
+  margin-bottom: 16px;
+
+  &:hover {
+    text-decoration: underline;
+    color: $accentColor;
+  }
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: $brown;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $brown;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 10px 14px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $borderColor;
+  }
+}
+
+.term {
+  flex: 1 1 120px;
+  font-size: 13px;
+  color: $white;
+}
+
+.value {
+  flex: 2 1 200px;
+  font-size: 14px;
+  word-break: break-word;
+  color: $white;
+}

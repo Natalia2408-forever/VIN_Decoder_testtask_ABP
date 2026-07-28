@@ -1,0 +1,94 @@
+@import '../../mainStyles/variables';
+@import '../../mainStyles/mixins';
+
+.footer {
+  border-top: 1px solid $borderColor;
+  background-color: $brown;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px;
+
+  @include on-tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include on-desktop {
+    padding: 28px 24px;
+    max-width: 1440px;
+    gap: 56px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 52px;
+  width: 52px;
+}
+
+.text {
+  font-size: 14px;
+  color: $white;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include on-desktop {
+    gap: 48px;
+  }
+}
+
+.link {
+  font-size: 14px;
+
+  &,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.toTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $borderColor;
+  border-radius: 50%;
+  font-size: 16px;
+
+  width: 48px;
+  height: 48px;
+  color: $white;
+
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+
+  @include on-tablet {
+    margin-left: auto;
+  }
+
+  &:hover {
+    background-color: $backgroundColor;
+    color: $accentColor;
+    transform: translateY(-2px);
+  }
+}

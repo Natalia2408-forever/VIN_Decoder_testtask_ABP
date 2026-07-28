@@ -1,0 +1,52 @@
+@import '../../mainStyles/variables';
+@import '../../mainStyles/mixins';
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include on-desktop {
+    text-align: left;
+    gap: 28px;
+  }
+}
+
+.headline {
+  font-size: 30px;
+  font-weight: 700;
+
+  @include on-desktop {
+    font-size: 34px;
+  }
+}
+
+.historyBlock {
+  margin-top: 8px;
+  @include on-desktop {
+    margin-top: 24px;
+  }
+}
+
+.stats {
+  font-size: 20px;
+  color: $brown;
+}
+
+.apiMessage {
+  font-size: 13px;
+  color: $textSecondaryColor;
+  margin-bottom: 12px;
+}
+
+.resultsTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

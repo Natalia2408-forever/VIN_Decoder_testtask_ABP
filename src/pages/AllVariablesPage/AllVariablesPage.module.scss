@@ -1,0 +1,89 @@
+@import '../../mainStyles/variables';
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: $brown;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
+  background-color: $brown;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: $white;
+
+  th,
+  td {
+    text-align: left;
+    padding: 10px 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  thead th {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $white;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  tbody tr:not(:last-child) td {
+    border-bottom: 1px solid $borderColor;
+  }
+
+  tbody tr:nth-child(odd) td {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.colId {
+  width: 14%;
+}
+
+.colName {
+  width: 36%;
+}
+
+.colType {
+  width: 25%;
+}
+
+.colGroup {
+  width: 25%;
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 13px;
+
+    th,
+    td {
+      padding: 6px 8px;
+    }
+  }
+}
+
+.link {
+  font-weight: 600;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $accentColor;
+  }
+}

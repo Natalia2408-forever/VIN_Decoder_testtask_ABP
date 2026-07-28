@@ -1,0 +1,10 @@
+@import '../../mainStyles/variables';
+
+.error {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: $errorColor;
+  background-color: $errorBackground;
+  font-size: 14px;
+  margin-bottom: 16px;
+}

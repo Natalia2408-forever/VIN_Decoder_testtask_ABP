@@ -1,0 +1,10 @@
+@import '../../mainStyles/variables';
+
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: $brown;
+  padding: 12px 0;
+}
